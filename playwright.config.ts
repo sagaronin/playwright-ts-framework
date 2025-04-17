@@ -16,4 +16,25 @@ export default defineConfig({
     actionTimeout: 0,
     trace: 'on-first-retry',
   },
+  projects: [{
+    name: 'chromium',
+    use: {
+      browserName: 'chromium',
+      launchOptions: {
+        slowMo: 50,
+      },
+    },
+  },
+  {
+    name: 'firefox',
+    use: {
+      browserName: 'firefox',
+    },
+  },
+  {
+    name: 'webkit',
+    use: {
+      browserName: 'webkit',
+    },
+  }],
 });
